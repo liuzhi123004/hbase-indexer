@@ -98,9 +98,9 @@ public class HBaseMapReduceIndexerTool extends Configured implements Tool {
     private static final Logger LOG = LoggerFactory.getLogger(HBaseMapReduceIndexerTool.class);
 
     private static final String FULL_INPUT_LIST = "full-input-list.txt";
-
+    // 从这里开始执行 mr job 
     public static void main(String[] args) throws Exception {
-
+    	
         int res = ToolRunner.run(new Configuration(), new HBaseMapReduceIndexerTool(), args);
         System.exit(res);
     }
